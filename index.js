@@ -99,8 +99,8 @@ const server = http.createServer((req, res) => {
         listOfGoods[goodsIndexOf] = goodsWithTotalPrice;
         fs.writeFile("./Goods/Goods.json", JSON.stringify(listOfGoods, null, 2), (error, data) => {
           if (error) {
-            res.writeHead(400, { "content-type": "text/plain" });
-            res.end("Bad Request");
+            res.writeHead(500, { "content-type": "text/plain" });
+            res.end("Error updating goods");
           } else {
             res.writeHead(200, { "content-type": "application/json" });
             res.end(
@@ -127,14 +127,15 @@ const server = http.createServer((req, res) => {
           res.end(
             JSON.stringify({
               message: "Goods deleted successfully",
+              data: { id },
             })
           );
         }
       });
-    } else {
-      res.writeHead(404, { "content-type": "text/plain" });
-      res.end("Goods not found");
     }
+  } else {
+    res.writeHead(404, { "content-type": "text/plain" });
+    res.end("Invalid URL");
   }
 });
 server.listen(PORT, () => {
