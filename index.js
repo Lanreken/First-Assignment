@@ -117,7 +117,7 @@ const server = http.createServer((req, res) => {
     const id = url.split("/")[2];
     const goodsIndex = listOfGoods.findIndex((n) => n.id === id);
     if (goodsIndex !== -1) {
-      listOfGoods.splice(goodsIndex, 1);
+      const goods = listOfGoods.splice(goodsIndex, 1);
       fs.writeFile("./Goods/Goods.json", JSON.stringify(listOfGoods, null, 2), (error, data) => {
         if (error) {
           res.writeHead(400, { "content-type": "text/plain" });
@@ -127,7 +127,7 @@ const server = http.createServer((req, res) => {
           res.end(
             JSON.stringify({
               message: "Goods deleted successfully",
-              data: { id },
+              data: goods,
             })
           );
         }
