@@ -1,0 +1,42 @@
+[
+  {
+    "id": "e1604dea-42d1-4328-b077-b122f1e2114f",
+    "name": "Gucci Bag",
+    "inStock": true,
+    "unit": 9,
+    "unitPrice": 97000,
+    "totalPrice": 873000
+  },
+  {
+    "id": "83c378db-06f7-4024-af23-40f754b44c9e",
+    "name": "The Curve Africa Sweaters",
+    "inStock": true,
+    "unit": 6,
+    "unitPrice": 8500,
+    "totalPrice": 51000
+  },
+  {
+    "id": "d2be176a-cb78-4aaf-99fd-cdf913bc0af8",
+    "name": "Laptop Bag",
+    "inStock": true,
+    "unit": 17,
+    "unitPrice": 14700,
+    "totalPrice": 249900
+  },
+  {
+    "id": "3998bc31-5fad-4d15-bc3e-0ba257b49960",
+    "name": "Crocs Shoes",
+    "inStock": false,
+    "unit": 0,
+    "unitPrice": 22500,
+    "totalPrice": 0
+  },
+  {
+    "id": "2a276673-3373-458f-b5c4-ef1eb68d78e9",
+    "name": "iPhone Charger",
+    "inStock": true,
+    "unit": 21,
+    "unitPrice": 11000,
+    "totalPrice": 231000
+  }
+]
